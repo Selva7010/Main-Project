@@ -19,7 +19,7 @@ const Cart = () => {
                 return (
                   <div
                     key={item._id}
-                    className=" items-center py-3 bg-gray-200 rounded-2xl w-70 xl:w-60 mt-5 ml-17 md:ml-0 xl:ml-0"
+                    className=" items-center py-3 bg-gray-200 rounded-2xl w-70 xl:w-60 mt-5 ml-11 md:ml-0 xl:ml-0"
                   >
                     <div className='px-3'>
                       <img
