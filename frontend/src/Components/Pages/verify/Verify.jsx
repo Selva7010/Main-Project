@@ -18,7 +18,7 @@ const Verify = () => {
         console.log(response);
         
         if(response.data.success){
-            navigate('/myOrder')
+            navigate(url+'/myOrder')
         }
         else{
             navigate('/')
