@@ -22,4 +22,4 @@ export const assets ={
     delivery_icon
 }
 
-export const url = 'http://localhost:4000'
+export const url = 'https://main-project-server-6dg0.onrender.com'

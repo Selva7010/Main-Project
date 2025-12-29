@@ -13,13 +13,13 @@ const Cart = () => {
   return (
     <div>
         <div className="flex justify-center">
-          <div className="w-7xl mt-10 mb-10 max-w-5xl grid grid-cols-4 gap-8">
+          <div className="w-7xl mt-10 mb-10 max-w-5xl xl:grid xl:grid-cols-4 md:grid md:grid-cols-3 gap-8">
             {food_list.map((item, index) => {
               if (cartItems[item._id] > 0) {
                 return (
                   <div
                     key={item._id}
-                    className=" items-center py-3 bg-gray-200 rounded-2xl"
+                    className=" items-center py-3 bg-gray-200 rounded-2xl w-70 xl:w-60 mt-5 ml-17 md:ml-0 xl:ml-0"
                   >
                     <div className='px-3'>
                       <img
@@ -59,20 +59,9 @@ const Cart = () => {
 
         </div>
       
-
-      {/* <div>
-        <h1 className='text-center font-bold text-xl mb-3'>APPLY CODE</h1>
-        <div className="promo flex justify-center mb-10">
-
-          <div className="input w-7xl flex justify-center">
-            <input className='bg-gray-400 border-none outline-none p-2 text-start text-lg font-bold' type="text" />
-            <button className='bg-black p-2 text-white w-25 cursor-pointer'>Apply</button>
-          </div>
-        </div>
-      </div> */}
       <div className="flex justify-center mb-10">
 
-        <div className="total w-xl">
+        <div className="total w-xl p-3">
           <div className="subtotal flex justify-between p-2">
             <h1>Subtotal</h1>
             <p>₹{getTotalAmount()}</p>

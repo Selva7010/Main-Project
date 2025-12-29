@@ -8,7 +8,7 @@ import Orders from '../Orders/Orders'
 
 const List = () => {
 
-  const url = "http://localhost:4000"
+  const url = "https://main-project-server-6dg0.onrender.com"
 
   const [list, setList] = useState([])
   const fetchData = async () => {

@@ -13,8 +13,8 @@ const FoodList = ({id, name, rating, description, price, image}) => {
       <div className="food-item hover:border border-gray-400 rounded-t-4xl shadow-md hover:shadow-xl">
         <div className="image ">
             <figure className='relative p-2'>
-                <img className='rounded-t-4xl w-80 h-55' src={url+"/uploads/"+image} alt="" />
-                <figcaption className='absolute top-20 left-3 xl:top-33 xl:left-5 translate-y-1/2'>
+                <img className='rounded-t-4xl w-full h-60 xl:w-80 xl:h-55' src={url+"/uploads/"+image} alt="" />
+                <figcaption className='absolute top-38 left-5 xl:top-33 xl:left-5 translate-y-1/2'>
                     {!cartItems[id] ? <div className='left-60 text-center cursor-pointer xl:w-10 xl:h-10 w-8 mb-5' onClick={()=>addToCart(id)} ><p className='bg-white hover:bg-green-700 hover:border hover:border-white p-1.5 text-xl font-semibold rounded-full hover:text-white'>+</p></div> :
                     <div className='flex items-center bg-white xl:p-2 p-0 rounded-3xl'>
                         <img className='mr-3 cursor-pointer xl:w-10 w-8 hover:border-2 border-red-500 rounded-full' onClick={()=>removeCartItem(id)} src={assets.remove_icon_red} alt="" />

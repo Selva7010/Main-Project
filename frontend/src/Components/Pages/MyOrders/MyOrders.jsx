@@ -61,9 +61,9 @@ const MyOrders = () => {
                           <img className='w-10 h-7 mt-2 ml-3' src={url + '/uploads/' + item.image} alt={item.name} />
                           <h1 className='xl:ml-10 ml-5 mt-2 xl:w-30 w-30'>{item.name}</h1>
                         </div>
-                        <h1 className='mt-2 xl:ml-27 ml-10 w-5 text-center'>{item.quantity}</h1>
-                        <h1 className='mt-2 xl:ml-18 ml-15 w-10 text-center'>{item.price}</h1>
-                        <h1 className='mt-2 xl:ml-40 ml-15 mr-3  w-10 text-center'>{item.quantity * item.price}</h1>
+                        <h1 className='mt-2 xl:ml-27 ml-5 w-5 text-center'>{item.quantity}</h1>
+                        <h1 className='mt-2 xl:ml-18 ml-13 w-10 text-center'>{item.price}</h1>
+                        <h1 className='mt-2 xl:ml-40 ml-9 mr-3  w-10 text-center'>{item.quantity * item.price}</h1>
 
                       </div>
                       
@@ -71,7 +71,13 @@ const MyOrders = () => {
                   })}
                   <hr className='mt-2 mb-2' />
                   <div className='flex justify-between items-center'>
-                    <div className='ml-2'>Order Status : <span className='text-green-600 mr-2'>&#x25cf;</span><span className='font-bold text-green-600'>{orders.status}</span></div>
+                    <div className='ml-2 xl:flex'>
+                      <h1>Order Status : </h1>
+                      <div className='xl:flex flex flex-row'>
+                        <span className='text-green-600 mr-2 xl:ml-3 ml-0'>&#x25cf;</span>
+                        <span className='font-bold text-green-600'>{orders.status}</span>
+                      </div>
+                    </div>
                   <div>
                     
                     <div className='flex items-center justify-end mr-3 mb-2'>

@@ -70,7 +70,7 @@ const PlaceOrder = () => {
       <div className="placeorder mt-10 mb-10 flex justify-center">
         <div className="xl:w-7xl">
           <form onSubmit={placeOrder} className='xl:flex xl:justify-between items-center'>
-            <div className="form w-sm xl:w-xl">
+            <div className="form w-88 xl:w-xl">
               <h1 className='text-center text-xl font-bold mb-5 text-red-500'>Delivery Address</h1>
               <div className="name-email flex">
                 <div className='mr-2 w-full'>
