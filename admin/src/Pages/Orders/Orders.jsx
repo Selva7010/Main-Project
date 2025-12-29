@@ -8,7 +8,7 @@ import { assets } from '../../assets/assets'
 
 const Orders = () => {
 
-  const url = "http://localhost:4000"
+  const url = "https://main-project-server-6dg0.onrender.com"
 
   const [order, setOrder] = useState([])
 
