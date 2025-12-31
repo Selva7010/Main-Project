@@ -11,6 +11,7 @@ const StoreProvider = (props)=>{
     const url = "https://main-project-server-6dg0.onrender.com"
     const [token, setToken] = useState("")
     const [food_list, setFoodList] = useState([])
+    const [order, setOrder] = useState([])
 
 
     const fetchFoodList = async()=>{
@@ -45,6 +46,21 @@ const StoreProvider = (props)=>{
       setCartItems(response.data.CartData)
     }
 
+    
+
+  const fetchAllData = async () => {
+    const response = await axios.get(url + '/api/orders/listOrders')
+    if (response.data.success) {
+      setOrder(response.data.data)
+      console.log(response.data.data);
+
+    }
+  }
+
+
+  
+  
+
 
     useEffect(()=>{
       async function loadData(){
@@ -55,6 +71,7 @@ const StoreProvider = (props)=>{
       }
       }
       loadData()
+      fetchAllData()
     },[])
 
     const getTotalAmount=(e)=>{
@@ -79,7 +96,8 @@ const StoreProvider = (props)=>{
         getTotalAmount,
         url,
         token,
-        setToken
+        setToken,
+        order
       }
     return(
         <Store.Provider value={contextValue}>

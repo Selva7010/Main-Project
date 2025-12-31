@@ -4,7 +4,7 @@ import axios from 'axios'
 
 
 export const Store = createContext(null)
-
+  
 const StoreProvider = (props)=>{
 
     const [cartItems, setCartItems] = useState({})

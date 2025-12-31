@@ -79,3 +79,8 @@ export const Register = async (req, res) => {
 
 
 }
+
+export const getUserData = async (req, res)=>{
+    const user = await UserModel.find({})
+    res.json({success:true, data:user})
+}
